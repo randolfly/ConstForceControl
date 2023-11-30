@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MotorDegreeToCablePosition" Id="{74506d61-801a-44fc-b9b8-372e062fd7c0}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION MotorDegreeToCablePosition : LREAL
+VAR_INPUT
+	motor_position : LREAL;
+END_VAR
+VAR_OUTPUT
+	cable_position : LREAL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[cable_position := motor_position;]]></ST>
+    </Implementation>
+    <LineIds Name="MotorDegreeToCablePosition">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

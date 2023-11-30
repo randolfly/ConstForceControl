@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="CableVelocityToMotorAngularVelocity" Id="{3d32bdbe-11b5-4ae5-bf28-72298521e5c1}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION CableVelocityToMotorAngularVelocity : LREAL
+VAR_INPUT
+	cable_velocity : LREAL;
+END_VAR
+VAR_OUTPUT
+	motor_velocity : LREAL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[motor_velocity := cable_velocity;]]></ST>
+    </Implementation>
+    <LineIds Name="CableVelocityToMotorAngularVelocity">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
