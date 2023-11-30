@@ -11,7 +11,7 @@ STRUCT
 	
 	// 最大最小速度(mm/s)
 	max_cable_velocity : LREAL := 1000;
-	min_cable_velocity : LREAL := 50;
+	min_cable_velocity : LREAL := -1000;
 END_STRUCT
 END_TYPE]]></Declaration>
   </DUT>

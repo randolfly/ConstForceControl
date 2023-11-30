@@ -7,30 +7,17 @@ VAR_IN_OUT
 	max_velocity : LREAL;
 	min_velocity : LREAL;
 END_VAR
-VAR
-	velocity_sign : LREAL;
-END_VAR]]></Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF velocity >= 0 THEN
-	velocity_sign := 1;
-ELSE
-	velocity_sign := -1;
+      <ST><![CDATA[IF velocity > max_velocity THEN
+	velocity := max_velocity;
 END_IF
-
-IF ABS(velocity) > max_velocity THEN
-	velocity := max_velocity * velocity_sign;
-END_IF
-IF ABS(velocity) < min_velocity THEN
-	velocity := min_velocity * velocity_sign;
+IF velocity < min_velocity THEN
+	velocity := min_velocity;
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="VelocitySaturation">
-      <LineId Id="7" Count="0" />
-      <LineId Id="21" Count="0" />
-      <LineId Id="12" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="13" Count="0" />
-      <LineId Id="28" Count="5" />
+      <LineId Id="29" Count="4" />
       <LineId Id="27" Count="0" />
     </LineIds>
   </POU>

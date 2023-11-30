@@ -13,6 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[// 系统状态读取
 GVL.axis1.ReadStatus();
+motor_state.is_motor_closedloop := GVL.axis1.Status.ControlLoopClosed;
 motor_state.axis_position_raw := GVL.axis1.NcToPlc.ActPos;
 motor_state.axis_velocity_raw := GVL.axis1.NcToPlc.ActVelo;
 
@@ -40,6 +41,7 @@ CableVelocityToMotorAngularVelocity(cable_velocity:= motor_param.target_cable_ve
     <LineIds Name="MAIN">
       <LineId Id="13" Count="0" />
       <LineId Id="2" Count="0" />
+      <LineId Id="47" Count="0" />
       <LineId Id="8" Count="0" />
       <LineId Id="10" Count="0" />
       <LineId Id="34" Count="1" />
